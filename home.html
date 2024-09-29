@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cycle Website</title>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="main">
+        <div id="navbar">
+            <div id="logo">
+                <img src="images/Ride2-removebg-preview.png" alt="logo">
+            </div>
+            <nav id="sidemap">
+                <ul>
+                    <li><a href="home.html" class="active">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="product.html">Product</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="herobanner">
+            <div class="slide fade">
+                <div class="numbertext">1/3</div>
+                <img src="images/MTB3.png" class="heroImage">
+                <div class="text">Welcome to Ride It!</div>
+            </div>
+            <div class="slide fade">
+                <div class="numbertext">2/3</div>
+                <img src="images/BMX1.png" class="heroImage">
+                <div class="text">Welcome to Ride It!</div>
+            </div>
+            <div class="slide fade">
+                <div class="numbertext">3/3</div>
+                <img src="images/RoadBikes1.png" class="heroImage">
+                <div class="text">Welcome to Ride It!</div>
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#171</a>
+            <a class="next" onclick="plusSlides(1)">&#187</a>
+
+            <div class="dot-container" style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
+
+
+        <div id="pageName">
+            <h2>Home Page</h2>
+        </div>
+
+        <div class="Education">
+
+            <img class="left" src="images/old Times.png">
+
+            <div class="describtionRight">
+                <h3>History</h3>
+
+                <p>
+                    The history of bicycles is a fascinating journey that dates back to the early 19th century. The     first known bicycle-like invention was the Draisine, also known as the “running machine” or “dandy  horse”, created by German Baron Karl von Drais in 18171. This early model was a two-wheeled,     human-powered vehicle without pedals, which riders propelled by pushing their feet against the  ground. The Draisine marked the beginning of a new era in personal transportation, offering a    faster and more efficient alternative to walking.
+                </p>
+                <br>
+                <p>
+                    The evolution of bicycles continued with significant advancements in the mid-19th century. The  “boneshaker” or velocipede, introduced in the 1860s, featured pedals attached directly to the    front wheel, allowing riders to propel themselves without touching the ground2. This design,   although rudimentary and uncomfortable due to its wooden frame and iron-rimmed wheels, paved the  way for further innovations.
+
+
+                </p>
+                <br>
+                <p>
+                    The 1870s saw the advent of the penny-farthing, characterized by its large front wheel and small    rear wheel. This design improved speed but was challenging to ride and dangerous due to its high   center of gravity.
+                    One of the most remarkable achievements in cycling history was the first documented bicycle     journey around the world. In 1884, Thomas Stevens, an Englishman, embarked on an epic journey on a  penny-farthing3. He traveled from San Francisco to Boston, then continued across Europe, the     Middle East, and Asia, before returning to the United States. Stevens’ journey, which took over     two years, showcased the bicycle’s potential as a means of long-distance travel and inspired    countless adventurers to explore the world on two wheels.
+
+                </p>
+                <br>
+                <p>
+                    Bicycles have come a long way since their inception, evolving into the sleek, high-tech machines    we see today. From the humble Draisine to the modern road and mountain bikes, the bicycle has  played a crucial role in shaping personal transportation and recreational activities worldwide.  Its history is a testament to human ingenuity and the enduring appeal of two-wheeled travel.
+                </p>
+            </div>
+        </div>
+        <div class="sponsors">
+
+            <h1>Sponsors</h1>
+
+            <div class="companyLogo">
+                <img src="images/Trek Logo.png">
+            
+                <img src="images/Canyon Logo.png">
+            
+                <img src="images/Orbea Logo.png">
+            
+                <img src="images/Merida Logo.png">
+            </div>
+        </div>
+
+        <div id="footer">
+            <div id="logo">
+                <img src="images/Logo 2.png" alt="logo">
+            </div>
+
+            <div id="sidemapBottom">
+                <ul></ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="product.html">Product</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div id="copyright">
+                <a href="gulity.html"><H2>CopyRight@</H2></a>
+            </div>
+        </div>
+
+
+    </div>
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("slide fade");
+          let dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+        }
+    </script>
+</body>
+</html>
