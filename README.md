@@ -1,2 +1,2 @@
 # Building a Website as a class assignment
-How Cycle Riding and buying them
+This is for people who are into cycling or looking for a new hobby.
